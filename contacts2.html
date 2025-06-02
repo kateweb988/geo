@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+	<title>ГЕОАРМ</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Favicon -->
+	<!-- <link rel="icon" href="img/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
+	<!-- OG -->
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="body-wrap page">
+		<div class="menu">
+			<div class="menu__list q">
+				<div class="submenu-wrapper">
+					<button class="back-button"><img src="img/back.svg" alt=""> Назад</button>
+					<div class="submenu-content">
+						<div class="menu__item">
+							<p class="submenu-toggle">Продукция</p>
+							<ul class="submenu">
+								<li><a href="#">Георешетка ГЕОАРМ®</a></li>
+								<li><a href="#">Георешетка ГЕОАРМ СД®</a></li>
+								<li><a href="#">Геотекстиль СТАБРУС ПЭТ®</a></li>
+								<li><a href="#">Геотекстиль СТАБРУС ПП®</a></li>
+								<li><a href="#">Биомат БИОАРМ®</a></li>
+								<li><a href="#">Геомембрана</a></li>
+								<li><a href="#">Геотекстиль ДОРНИТ®</a></li>
+							</ul>
+						</div>
+						<div class="menu__item">
+							<p class="submenu-toggle">Применение</p>
+							<ul class="submenu">
+								<li><a href="#">Разделение</a></li>
+								<li><a href="#">Армирование</a></li>
+								<li><a href="#">Защита</a></li>
+								<li><a href="#">Фильтрация</a></li>
+								<li><a href="#">Дренаж</a></li>
+								<li><a href="#">Борьба с эрозией</a></li>
+								<li><a href="#">Гидроизоляция</a></li>
+								<li><a href="#">Укрепление откосов</a></li>
+								<li><a href="#">Озеленение</a></li>
+							</ul>
+						</div>
+						<div class="menu__item">
+							<p class="submenu-toggle">Отраслевые решения</p>
+							<ul class="submenu">
+								<li><a href="#">Транспорт</a></li>
+								<li><a href="#">Добывающая промышленность</a></li>
+								<li><a href="#">Энергетика</a></li>
+								<li><a href="#">Гидротехническое строительство</a></li>
+								<li><a href="#">Управление отходами</a></li>
+								<li><a href="#">Ландшафтный дизайн</a></li>
+								<li><a href="#">Военное строительство</a></li>
+								<li><a href="#">Сельское хозяйство</a></li>
+								<li><a href="#">Гражданское строительство</a></li>
+							</ul>
+						</div>
+						<div class="menu__item">
+							<p class="submenu-toggle">Компания</p>
+							<ul class="submenu">
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Производство</a></li>
+								<li><a href="#">Реализованные проекты</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="menu__item">
+							<p class="submenu-toggle">Документы</p>
+							<ul class="submenu">
+								<li><a href="#">Сертификаты</a></li>
+								<li><a href="#">Технические листы</a></li>
+								<li><a href="#">Альбомы конструкций</a></li>
+								<li><a href="#">Инструкции</a></li>
+								<li><a href="#">Брошюры</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search">
+			<form action="#" class="search__form">
+				<input type="text" name="search" placeholder="Поиск">
+				<button type="submit">
+					<img src="img/search.svg" alt="" class="svg">
+				</button>
+			</form>
+		</div>
+		<header class="header" id="header">
+			<nav class="nav">
+				<div class="container">
+					<div class="nav__box q">
+						<a href="main.html" class="nav__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<ul class="nav__list q">
+							<li>
+								<a href="#">
+									Продукция
+								</a>
+								<ul>
+									<li>
+										<a href="#">
+											Георешетка ГЕОАРМ®
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Георешетка ГЕОАРМ СД®
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Геотекстиль СТАБРУС ПЭТ®
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Геотекстиль СТАБРУС ПП®
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Биомат БИОАРМ®
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Геомембрана
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Геотекстиль ДОРНИТ®
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									Применение
+								</a>
+								<ul>
+									<li>
+										<a href="#">
+											Разделение
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Армирование
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Защита
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Фильтрация
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Дренаж
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Борьба с эрозией
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Гидроизоляция
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Укрепление откосов
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Озеленение
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									Отраслевые решения
+								</a>
+								<ul>
+									<li>
+										<a href="#">
+											Транспорт
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Добывающая промышленность
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Энергетика
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Гидротехническое строительство
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Управление отходами
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Ландшафтный дизайн
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Военное строительство
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Сельское хозяйство
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Гражданское строительтсво
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									Компания
+								</a>
+								<ul>
+									<li>
+										<a href="#">
+											О компании
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Производсвто
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Реализованные проекты
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Новости
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Контакты
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									Документы
+								</a>
+								<ul>
+									<li>
+										<a href="#">
+											Сертификаты
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Технические листы
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Альбомы конструкций
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Инструкции
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Брошюры
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									Контакты
+								</a>
+							</li>
+						</ul>
+						<div class="nav__content q">
+							<div class="accordeon accordeon_1 header-accordeon">
+								<div class="accordeon-container">
+									<li class="accordeon__item">
+										<a href="tel:+74959894225" class="nav__main">
+											+7 (495) 989-42-25
+										</a>
+										<div class="accordeon__button closed"> <img src="img/select.svg" alt="" class="svg">
+											<img src="img/phone.svg" alt="" class="mob-icon">
+										</div>
+										<ul class="accordeon__panel">
+											<li class="panel__text">
+												<a href="tel:+74959894225">
+													+7 (495) 989-42-25
+												</a>
+												<a href="tel:+74991320525">
+													+7 (499) 132-05-25
+												</a>
+												<a href="mailto:info@geoarm.ru">
+													info@geoarm.ru
+												</a>
+											</li>
+										</ul>
+									</li>
+								</div>
+							</div>
+							<div class="menu-btn2">
+								<img src="img/search.svg" alt="" class="svg">
+								<img src="img/close.svg" alt="" class="svg">
+							</div>
+							<div class="menu-btn"></div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="contacts2 contacts news-page" id="contacts2">
+			<div class="container">
+				<div class="bread bread_blue">
+					<a href="main.html">
+						Главная
+					</a>
+					<p>
+						Контакты
+					</p>
+				</div>
+				<h1>
+					Контакты
+				</h1>
+				<div class="contacts2__row q">
+					<div class="contacts__item">
+						<img src="img/contacts1.png" alt="">
+						<h2>
+							Офис
+						</h2>
+						<div class="contacts__row contacts__row_1 q">
+							<div class="contacts__el">
+								<a href="tel:+74959894225">
+									+7 (495) 989-42-25
+								</a>
+								<a href="tel:+74991320525">
+									+7 (499) 132-05-25
+								</a>
+								<a href="mailto:info@geoarm.ru">
+									info@geoarm.ru
+								</a>
+							</div>
+							<div class="contacts__el">
+								<span>
+									Адрес
+								</span>
+								<p>
+									г. Москва, ул. Гарибальди, дом 6, корп.1, эт.2, офис 34
+								</p>
+							</div>
+							<div class="contacts__el">
+								<span>
+									Режим работы
+								</span>
+								<p>
+									Пн - Пт <small> 09:30 — 19:00</small>
+								</p>
+							</div>
+							<div class="contacts__el">
+								<span>
+									Почтовый адрес
+								</span>
+								<p>
+									119313, г. Москва, а/я 60
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="contacts__item">
+						<img src="img/contacts2.png" alt="">
+						<h2>
+							Производство
+						</h2>
+						<div class="contacts__row  contacts__row_2 q">
+							<div class="contacts__el">
+								<span>
+									Адрес
+								</span>
+								<p>
+									Московская область, г. Протвино, Заводской проезд, д.36
+								</p>
+							</div>
+							<div class="contacts__el">
+								<span>
+									Режим работы
+								</span>
+								<p>
+									Пн - Пт <small> 09:00 — 17:00</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h2>
+					Схема проезда
+				</h2>
+				<div id="map"></div>
+				<div class="contacts__info">
+					<h2>
+						Реквизиты
+					</h2>
+					<div class="contacts__per">
+						<h3>
+							Компания
+						</h3>
+						<div class="contacts__area q">
+							<p>
+								Полное наименование
+							</p>
+							<p>
+								ООО «Геоарм»
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								Юридический адрес
+							</p>
+							<p>
+								119313, г Москва, ул. Гарибальди, дом 6, корп.1, эт.2, пом. XXXVII, комн.34
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								Почтовый адрес
+							</p>
+							<p>
+								119313, г Москва, а/я 60
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								Фактический адрес
+							</p>
+							<p>
+								119313, г. Москва, ул. Гарибальди, дом 6, корп.1
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								ОГРН
+							</p>
+							<p>
+								1097746578676
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								ИНН
+							</p>
+							<p>
+								7736607936
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								КПП
+							</p>
+							<p>
+								773601001
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								ОКПО
+							</p>
+							<p>
+								63620028
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								ОКТМО
+							</p>
+							<p>
+								45904000
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								ОКВЭД
+							</p>
+							<p>
+								51.53.24
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								ОКОГУ
+							</p>
+							<p>
+								49013
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								ОКОПФ
+							</p>
+							<p>
+								12165
+							</p>
+						</div>
+					</div>
+					<div class="contacts__per">
+						<h3>
+							Банковские реквизиты
+						</h3>
+						<div class="contacts__area q">
+							<p>
+								Банк
+							</p>
+							<p>
+								АО «Райффайзенбанк», г. Москва
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								Р/с
+							</p>
+							<p>
+								40702810100000047438
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								Бик
+							</p>
+							<p>
+								044525700
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								Кор/с
+							</p>
+							<p>
+								30101810200000000700
+							</p>
+						</div>
+					</div>
+					<div class="contacts__per">
+						<h3>
+							Руководители
+						</h3>
+						<div class="contacts__area q">
+							<p>
+								Генеральный директор
+							</p>
+							<p>
+								Жученко Павел Максимович
+							</p>
+						</div>
+						<div class="contacts__area q">
+							<p>
+								Главный бухгалтер
+							</p>
+							<p>
+								Жученко Павел Максимович (Приказ №2 от 01.02.2020)
+							</p>
+						</div>
+					</div>
+					<a href="#" class="contacts__btn btn" download="">
+						<p>
+							Скачать резвизиты
+						</p>
+					</a>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__box q">
+					<div class="footer__nav q">
+						<div class="footer__item footer__item_1">
+							<p class="footer__name">
+								Продукция
+							</p>
+							<ul>
+								<li>
+									<a href="#">
+										Георешетка ГЕОАРМ®
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Георешетка ГЕОАРМ СД®
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Геотекстиль СТАБРУС ПЭТ®
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Геотекстиль СТАБРУС ПП®
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Биомат БИОАРМ®
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Геомембрана
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Геотекстиль ДОРНИТ®
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__item footer__item_2">
+							<p class="footer__name">
+								Применение
+							</p>
+							<ul>
+								<li>
+									<a href="#">
+										Разделение
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Армирование
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Защита
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Фильтрация
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Дренаж
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Борьба с эрозией
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Гидроизоляция
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Укрепление откосов
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Озеленение
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__item footer__item_3">
+							<p class="footer__name">
+								Отраслевые решения
+							</p>
+							<ul>
+								<li>
+									<a href="#">
+										Транспорт
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Добывающая промышленность
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Энергетика
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Гидротехническое строительство
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Управление отходами
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Ландшафтный дизайн
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Военное строительство
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Сельское хозяйство
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Гражданское строительтсво
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__area">
+							<div class="footer__item">
+								<p class="footer__name">
+									Компания
+								</p>
+								<ul>
+									<li>
+										<a href="#">
+											О компании
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Производсвто
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Реализованные проекты
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Новости
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Контакты
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item">
+								<p class="footer__name">
+									Документы
+								</p>
+								<ul>
+									<li>
+										<a href="#">
+											Сертификаты
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Технические листы
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Альбомы конструкций
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Инструкции
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Брошюры
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__content">
+						<img src="img/footer-logo.svg" alt="" class="footer__logo">
+						<p class="footer__name">
+							Контакты
+						</p>
+						<div class="footer__el">
+							<span>
+								Телефон
+							</span>
+							<a href="tel:+74959894225">
+								+7 (495) 989-42-25
+							</a>
+							<a href="tel:+74991320525">
+								+7 (499) 132-05-25
+							</a>
+						</div>
+						<div class="footer__el">
+							<span>
+								Электронная почта
+							</span>
+							<a href="mailto:info@geoarm.ru">
+								info@geoarm.ru
+							</a>
+						</div>
+						<a href="#" class="footer__download q" download="">
+							<img src="img/load.svg" alt="" class="svg">
+							Скачать реквизиты
+						</a>
+						<div class="footer__el">
+							<span>
+								Адрес
+							</span>
+							<p>
+								г. Москва, ул. Гарибальди, дом 6, корп.1, эт.2, офис 34
+							</p>
+						</div>
+						<div class="footer__el">
+							<span>
+								Режим работы
+							</span>
+							<p>
+								Пн - Пт <span> 09:00 - 19:00</span>
+							</p>
+						</div>
+						<div class="footer__el footer__el_socials">
+							<span>
+								Мы в соцсетях
+							</span>
+							<div class="q">
+								<a href="#" target="_blank">
+									<img src="img/social1.svg" alt="">
+								</a>
+								<a href="#" target="_blank">
+									<img src="img/social2.svg" alt="">
+								</a>
+								<a href="#" target="_blank">
+									<img src="img/social3.svg" alt="">
+								</a>
+								<a href="#" target="_blank">
+									<img src="img/social4.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom q">
+					<p>
+						© 2011–2025 ООО «Геоарм». Все права защищены
+					</p>
+					<a href="#" target="_blank">
+						Политика конфиденциальности
+					</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript">
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map("map", {
+				center: [55.276179, 37.536203],
+				zoom: 8,
+				controls: []
+			});
+
+			var myGeoObjects = [];
+
+			// Метка 1
+			myGeoObjects[0] = new ymaps.Placemark([55.676179, 37.536203], {
+				balloonContentBody: 'Текст в балуне',
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/map1.svg',
+				iconImageSize: [50, 39],
+				iconImageOffset: [-35, -35]
+			});
+
+			// Метка 2
+			myGeoObjects[1] = new ymaps.Placemark([54.886052, 37.234010], {
+				balloonContentBody: 'Текст в балуне',
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/map2.svg',
+				iconImageSize: [128, 40],
+				iconImageOffset: [-35, -35]
+			});
+
+			var clusterer = new ymaps.Clusterer({
+				clusterDisableClickZoom: false,
+				clusterOpenBalloonOnClick: false,
+			});
+
+			clusterer.add(myGeoObjects);
+			myMap.geoObjects.add(clusterer);
+			myMap.behaviors.disable('scrollZoom');
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+	<script src="js/all.js"></script>
+	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+	<script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+</body>
+
+</html>
