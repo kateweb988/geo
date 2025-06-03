@@ -449,9 +449,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const checkboxLists = document.querySelectorAll('.checkbox-list');
   const selectedFiltersContainer = document.getElementById('selectedFilters');
   const allCheckboxes = document.querySelectorAll('.checkbox-list input[type="checkbox"]');
-  const resetBtn = document.getElementById('resetFilters');  // Кнопка сброса фильтра
 
-  // Показать главное меню фильтров
+  const filterActions = document.getElementById('filterActions');
+  const resetFiltersBottom = document.getElementById('resetFiltersBottom');
+  const applyFiltersBtn = document.getElementById('applyFilters');
+  const resetFiltersTop = document.getElementById('resetFiltersTop');
+
+  // Показать главное меню
   function showMainMenu() {
     popup.style.display = 'flex';
     materialList.classList.add('active');
@@ -460,39 +464,30 @@ document.addEventListener('DOMContentLoaded', function () {
     toMaterialsBtn.style.display = 'none';
   }
 
-  // Обновление видимости кнопки сброса
-  function updateResetButtonVisibility() {
+  // Обновление видимости кнопок сброса/применения
+  function updateFilterActionButtons() {
     const anyChecked = Array.from(allCheckboxes).some(cb => cb.checked);
-    resetBtn.style.display = anyChecked ? 'inline-flex' : 'none';
+    filterActions.style.display = anyChecked ? 'flex' : 'none';
+    resetFiltersTop.style.display = anyChecked ? 'flex' : 'none';
   }
 
-  // Создание тега выбранного фильтра
+  // Создание тега фильтра
   function createTag(labelText, checkbox) {
     const tag = document.createElement('div');
     tag.classList.add('filter-tag');
     tag.setAttribute('data-checkbox-id', checkbox.id);
     tag.innerHTML = `${labelText} <span style="cursor:pointer;"></span>`;
 
-    // При клике на крестик снимаем чекбокс и удаляем тег
     tag.querySelector('span').addEventListener('click', () => {
       checkbox.checked = false;
       tag.remove();
-      updateResetButtonVisibility();
+      updateFilterActionButtons();
     });
 
     selectedFiltersContainer.appendChild(tag);
   }
 
-  // Обработчики кликов и событий
-
-  openBtn.addEventListener('click', showMainMenu);
-
-  closeBtn.addEventListener('click', () => {
-    popup.style.display = 'none';
-  });
-
-  toMaterialsBtn.addEventListener('click', showMainMenu);
-
+  // Показ/скрытие групп фильтров
   materialItems.forEach(item => {
     item.addEventListener('click', () => {
       const material = item.dataset.material;
@@ -505,6 +500,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Открытие и закрытие попапа
+  openBtn.addEventListener('click', showMainMenu);
+  closeBtn.addEventListener('click', () => popup.style.display = 'none');
+  toMaterialsBtn.addEventListener('click', showMainMenu);
+
+  // Обработка чекбоксов
   allCheckboxes.forEach(checkbox => {
     checkbox.addEventListener('change', () => {
       const label = document.querySelector(`label[for="${checkbox.id}"]`);
@@ -519,21 +520,32 @@ document.addEventListener('DOMContentLoaded', function () {
           existingTag.remove();
         }
       }
-      updateResetButtonVisibility();
+      updateFilterActionButtons();
     });
   });
 
-  resetBtn.addEventListener('click', () => {
-    allCheckboxes.forEach(checkbox => {
-      checkbox.checked = false;
-    });
+  // Сброс всех фильтров
+  function resetAllFilters() {
+    allCheckboxes.forEach(cb => cb.checked = false);
     selectedFiltersContainer.innerHTML = '';
-    updateResetButtonVisibility();
+    updateFilterActionButtons();
+  }
+
+  // Сброс кнопками сверху и снизу
+  resetFiltersTop.addEventListener('click', resetAllFilters);
+  resetFiltersBottom.addEventListener('click', resetAllFilters);
+
+  // Применение фильтров
+  applyFiltersBtn.addEventListener('click', () => {
+    // Пример действия: просто скрыть попап
+    popup.style.display = 'none';
   });
 
-  // Изначально прячем кнопку сброса
-  updateResetButtonVisibility();
+  // При загрузке — скрыть
+  updateFilterActionButtons();
 });
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
