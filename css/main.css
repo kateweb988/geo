@@ -3292,7 +3292,7 @@ input.error {
     padding: 12px 0;
     border-bottom: 1px solid #d9d9d9;
     color: #0085bf;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'TT Interphases Pro';
     font-weight: 500;
     line-height: 120%; }
@@ -3339,15 +3339,17 @@ input.error {
       margin-left: 120px; }
       .functions__item div p {
         color: #101820;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 120%;
         margin-bottom: 15px; }
         .functions__item div p:last-child {
           margin-bottom: 0; }
+        .functions__item div p br {
+          display: none; }
     .functions__item span {
       color: #0085bf;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 120%;
       display: block;
@@ -3371,7 +3373,7 @@ input.error {
       font-family: 'TTHovesPro-Md';
       line-height: 120%; }
     .settings__item p {
-      color: #595959;
+      color: #101820;
       font-size: 16px;
       font-weight: 400;
       line-height: 120%; }
@@ -3452,7 +3454,7 @@ input.error {
       .settings__wrap table td {
         padding: 10px 12px;
         color: #101820;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         box-sizing: border-box;
         line-height: 20px;
@@ -3500,7 +3502,7 @@ input.error {
       text-align: center; }
 
 .van4 .van__item p {
-  font-size: 13.8px; }
+  font-size: 16px; }
 
 .functions2 .functions__item div {
   max-width: 571px; }
@@ -3565,7 +3567,7 @@ input.error {
   .settings2 .bb div {
     display: flex;
     width: 50%;
-    padding: 10px 12px !important;
+    padding: 9.6px 12px !important;
     border-bottom: 1px solid #eeeeee;
     justify-content: space-between; }
     .settings2 .bb div:first-child {
@@ -3761,15 +3763,18 @@ input.error {
   .projects__mob #openFilters:before {
     display: none; }
 
-#closePopup, .materials-btn, #resetFilters {
+#closePopup, .materials-btn, #resetFiltersTop {
   background: transparent;
   border: none;
   color: #0085bf;
   font-size: 14px;
   font-weight: 500;
   line-height: 120%;
-  margin-bottom: 30px; }
-  #closePopup img, .materials-btn img, #resetFilters img {
+  margin-bottom: 30px;
+  align-items: center;
+  padding-left: 0;
+  padding-bottom: 0; }
+  #closePopup img, .materials-btn img, #resetFiltersTop img {
     margin-right: 5px; }
 
 .materials-btn {
@@ -3810,15 +3815,15 @@ input.error {
   cursor: pointer;
   background: url(../img/cla.svg) no-repeat center center; }
 
-#resetFilters {
+#resetFiltersTop {
   position: relative; }
-  #resetFilters:after {
+  #resetFiltersTop:after {
     content: "";
     display: block;
     background: url(../img/remove.svg) no-repeat center center;
     width: 9px;
-    height: 8px;
-    top: 6px;
+    height: 10px;
+    top: 4px;
     right: -9px;
     position: absolute; }
 
@@ -3826,6 +3831,44 @@ input.error {
   display: flex;
   justify-content: space-between;
   align-items: flex-end; }
+
+.col.scroll {
+  overflow-x: auto; }
+  .col.scroll td {
+    min-width: 64.3px; }
+
+.settings__scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0085BF #E7E7E7; }
+
+.filter-actions {
+  width: 100%;
+  position: fixed;
+  bottom: 20px;
+  border-top: none !important;
+  justify-content: center; }
+
+#resetFiltersBottom, #applyFilters {
+  width: 48%;
+  height: 42px;
+  background: #0085BF;
+  border: none;
+  border: 1px solid #0085BF;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'TT Interphases Pro';
+  line-height: 18px;
+  color: #0085BF; }
+  #resetFiltersBottom:hover, #applyFilters:hover {
+    color: white; }
+
+#resetFiltersBottom {
+  background: transparent; }
+
+#applyFilters {
+  color: white; }
 
 @media screen and (max-width: 1750px) {
   .search {
@@ -3896,7 +3939,9 @@ input.error {
     max-width: 478px;
     margin-left: 30px; }
   .industry-page_product .industry-page__item {
-    width: 23.46% !important; } }
+    width: 23.46% !important; }
+  .settings__wrap table td {
+    font-size: 14px; } }
 
 @media screen and (max-width: 1199px) {
   .product__top p br {
@@ -5723,19 +5768,22 @@ input.error {
     white-space: nowrap; }
   .fl {
     flex-direction: column; }
-  #resetFilters {
+  #resetFiltersTop {
     margin-bottom: -58px;
     margin-top: 42px;
-    font-size: 13px; }
+    font-size: 13px;
+    margin-right: 12px; }
   .projects__row {
     margin-top: 30px; }
   .filter-content {
     padding-top: 0;
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding-left: 10px;
+    padding-right: 10px; }
   .material {
     padding: 15px 0;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .option {
+    padding-left: 0; } }
 
 @media screen and (max-width: 360px) {
   .industry .swiper2 .swiper-slide a {
