@@ -223,7 +223,7 @@
 							</li>
 							<li>
 								<a href="#">
-									Отраслевые решения
+									Отрасли
 								</a>
 								<ul>
 									<li>
@@ -588,6 +588,22 @@
 								Наиболее востребован, благодаря своей стойкости по <br> отношению к различным негативным
 								воздействиям
 								Отличные <br> показатели огнеустойчивости, водо- и воздухопроницаемости.
+							</span>
+						</p>
+					</a>
+					<a href="#" class="prod__item">
+						<picture>
+							<source srcset="img/prod8-mob.png" media="(max-width: 576px)">
+							<img src="img/prod8.png" alt="">
+						</picture>
+						<h3>
+							Георешетка <br> полиэфирная ГЕОАРМ® <img src="img/ar-right.svg" alt="" class="svg">
+						</h3>
+						<p>
+							<span>Плоская ячеистая решетка из полиэфирных нитей с пропиткой</span>
+							<span>
+								Используется для усиления асфальтобетона, увеличивая его сопротивляемость растяжению. Также
+								применяется в укреплении откосов и насыпей повышенной крутизны.
 							</span>
 						</p>
 					</a>
@@ -1020,7 +1036,7 @@
 							ответить на ваши вопросы
 						</p>
 					</div>
-					<form action="success.php" class="order__form js-form" id="popupResult" method="post">
+					<form action="ess.php" class="order__form js-form" id="popupResult" method="post">
 						<div class="order__flex q">
 							<div class="form-group">
 								<input type="text" name="name" required placeholder=" " class="order__input form__field"
@@ -1045,6 +1061,15 @@
 								<label for="text">Сообщение</label>
 							</div>
 						</div>
+						<div class="popup__flex q">
+							<label class="file-label">
+								<img src="img/upload.svg" alt="" class="svg">
+								Прикрепить файлы
+								<input type="file" id="fileInput" multiple>
+							</label>
+							<div class="file-count" id="fileCountText"></div>
+						</div>
+						<div class="g-recaptcha" data-sitekey="6LcDo3crAAAAAEaatjXZ_87x1bZ46JxZdT0MjwF8"></div>
 						<p>
 							Нажимая на кнопку «Оставить заявку», вы соглашаетесь с
 							<a href="#" target="_blank">политикой обработки персональных данных</a>
@@ -1054,6 +1079,7 @@
 								Оставить заявку
 							</p>
 						</button>
+						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 					</form>
 				</div>
 			</div>
@@ -1387,6 +1413,16 @@
 								<label for="text">Сообщение</label>
 							</div>
 						</div>
+						<div class="popup__flex q">
+							<label class="file-label">
+								<img src="img/upload.svg" alt="" class="svg">
+								Выбрать файлы
+								<input type="file" id="fileInput" multiple>
+							</label>
+							<div class="file-count" id="fileCountText"></div>
+						</div>
+
+						<div class="g-recaptcha" data-sitekey="6LcDo3crAAAAAEaatjXZ_87x1bZ46JxZdT0MjwF8"></div>
 						<p>
 							Нажимая на кнопку «Оставить заявку», вы соглашаетесь с
 							<a href="#" target="_blank">политикой обработки персональных данных</a>
@@ -1396,6 +1432,7 @@
 								Оставить заявку
 							</p>
 						</button>
+						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 					</form>
 				</div>
 			</div>
@@ -1420,11 +1457,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
 	<script src="js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
 	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
 	<script type="text/javascript"
 		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 </body>
-
 
 </html>
