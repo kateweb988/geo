@@ -4186,7 +4186,7 @@ input[type="file"] {
   line-height: 29px;
   font-family: 'TTHovesPro-Md';
   margin-bottom: 16px;
-  margin-top: -8px; }
+ }
 
 .articles__text {
   color: #595959;
@@ -4208,7 +4208,7 @@ input[type="file"] {
   line-height: 19px;
   color: #0085BF;
   margin-top: auto;
-  margin-bottom: -8px; }
+   }
   .articles__link .svg {
     margin-left: 7px;
     position: relative;
