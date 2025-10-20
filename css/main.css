@@ -4278,6 +4278,32 @@ input[type="file"] {
     .faq-item p {
       margin-bottom: 20px; }
 
+#popup-call2 .popup__title {
+  text-align: center;
+  margin-bottom: 20px; }
+
+#popup-call2 .popup__text {
+  text-align: center;
+  margin-bottom: 30px; }
+
+#popup-call2 .form-group {
+  width: 100%; }
+
+#popup-call2 .custom-checkbox:checked + label::before {
+  background: url(../img/check.svg) no-repeat center center;
+  background-color: #0085BF; }
+
+#popup-call2 .checkbox {
+  margin-top: 20px; }
+
+#popup-call2 .custom-checkbox + label a {
+  color: #0085BF; }
+  #popup-call2 .custom-checkbox + label a:hover {
+    color: black; }
+
+#popup-call2 .popup-call__box .order__form button {
+  width: 100%; }
+
 @media screen and (max-width: 1750px) {
   .search {
     left: 55% !important; } }
@@ -5246,7 +5272,14 @@ input[type="file"] {
     padding: 0 16px; }
   .faq .tabs__nav {
     margin-bottom: 20px;
-    margin-top: 32px; } }
+    margin-top: 32px; }
+  #popup-call2 .popup__title, #popup-call2 .popup__text {
+    text-align: left; }
+  #popup-call2 .popup__text {
+    margin-bottom: 20px; }
+  .custom-checkbox + label {
+    font-size: 14px;
+    margin-bottom: 25px; } }
 
 @media screen and (max-width: 767px) {
   .industry-page3 .industry-page__item {
