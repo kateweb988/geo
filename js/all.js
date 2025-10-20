@@ -403,9 +403,14 @@ document.addEventListener('DOMContentLoaded', function () {
     $.arcticmodal('close');
 
   });
-  $('.call, .a1').click(function (e) {
+  $('.a1').click(function (e) {
     e.preventDefault();
     $('#popup-call').arcticmodal({
+    });
+  });
+  $('.a2').click(function (e) {
+    e.preventDefault();
+    $('#popup-call2').arcticmodal({
     });
   });
 });
@@ -758,42 +763,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-// document.querySelectorAll('.nav__list li').forEach(item => {
-//   const navItems = document.querySelectorAll('.nav__list > li');
-//   const nav = document.querySelector('.nav');
+document.addEventListener('DOMContentLoaded', function () {
+  function toggleScrollBasedOnPopup() {
+    const pop = document.querySelector('.filter-popup');
+    const style = getComputedStyle(pop);
 
-//   navItems.forEach((item, index) => {
-//     const mainLink = item.querySelector(':scope > a');
-//     if (!mainLink) return;
+    if (style.display === 'flex') {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
 
-//     item.addEventListener('mouseenter', () => {
-//       // Добавляем класс 'active' только если это не последний элемент
-//       if (index !== navItems.length - 1) {
-//         nav.classList.add('active');
-//       }
+  // Проверка при загрузке
+  window.addEventListener('load', toggleScrollBasedOnPopup);
 
-//       navItems.forEach(otherItem => {
-//         const otherLink = otherItem.querySelector(':scope > a');
-//         if (otherItem !== item && otherLink) {
-//           otherLink.style.color = '#8A8E92';
-//         }
-//       });
-//     });
-
-//     item.addEventListener('mouseleave', () => {
-//       nav.classList.remove('active');
-
-//       navItems.forEach(otherItem => {
-//         const otherLink = otherItem.querySelector(':scope > a');
-//         if (otherLink) {
-//           otherLink.style.color = '';
-//         }
-//       });
-//     });
-//   });
-// });
-
-
+  // Проверка при изменении display (например, если popup открывается динамически)
+  const observer = new MutationObserver(toggleScrollBasedOnPopup);
+  const pop = document.querySelector('.filter-popup');
+  if (pop) {
+    observer.observe(pop, { attributes: true, attributeFilter: ['style', 'class'] });
+  }
+});
 document.querySelectorAll('.nav__list li').forEach(item => {
   const navItems = document.querySelectorAll('.nav__list > li');
   const nav = document.querySelector('.nav');
@@ -844,23 +835,6 @@ document.querySelectorAll('.nav__list li').forEach(item => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.querySelector('.menu-btn');
-  const menu = document.querySelector('.menu');
-  const body = document.body;
-
-  menuBtn.addEventListener('click', function () {
-    menuBtn.classList.toggle('active');
-    menu.classList.toggle('active');
-
-    // Добавление/удаление overflow: hidden у body
-    if (menu.classList.contains('active')) {
-      body.style.overflow = 'hidden';
-    } else {
-      body.style.overflow = '';
-    }
-  });
-});
 document.querySelectorAll('.submenu-toggle').forEach(function (item) {
   item.addEventListener('click', function () {
     const submenu = this.nextElementSibling; // Находим ul
@@ -883,11 +857,55 @@ document.querySelector('.back-button').addEventListener('click', function () {
   submenuWrapper.classList.remove('show-back-button');
 });
 document.addEventListener("DOMContentLoaded", () => {
-  let menuBtn2 = document.querySelector('.menu-btn2');
-  let menu2 = document.querySelector('.search');
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.menu');
+  const menuBtn2 = document.querySelector('.menu-btn2');
+  const menu2 = document.querySelector('.search');
+  const body = document.body;
+
+  menuBtn.addEventListener('click', function () {
+    const isOpening = !menu.classList.contains('active');
+
+    // Закрываем второе меню
+    menuBtn2.classList.remove('active');
+    menu2.classList.remove('active');
+
+    // Переключаем текущее меню
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+
+    // Управляем прокруткой
+    if (isOpening) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
+  });
+
   menuBtn2.addEventListener('click', function () {
+    const isOpening = !menu2.classList.contains('active');
+
+    // Закрываем первое меню
+    menuBtn.classList.remove('active');
+    menu.classList.remove('active');
+    body.style.overflow = ''; // Возвращаем прокрутку
+
+    // Переключаем текущее меню
     menuBtn2.classList.toggle('active');
     menu2.classList.toggle('active');
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const fileInput = document.getElementById('fileInput');
+  const fileCountText = document.getElementById('fileCountText');
+
+  fileInput.addEventListener('change', () => {
+    const count = fileInput.files.length;
+    if (count > 0) {
+      fileCountText.textContent = `Приложено файлов: ${count}`;
+    } else {
+      fileCountText.textContent = '';
+    }
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
