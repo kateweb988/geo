@@ -333,6 +333,11 @@
 				popup
 			</p>
 		</a>
+		<a href="#" class="btn btn_1 a2" style="margin: 20px;">
+			<p>
+				popup2
+			</p>
+		</a>
 		<!-- <a href="#" class="btn btn_2 a2" style="margin: 20px;">
 			<p>
 				thank
@@ -379,6 +384,55 @@
 						Нажимая на кнопку «Оставить заявку», вы соглашаетесь с
 						<a href="#" target="_blank">политикой обработки персональных данных</a>
 					</p>
+					<button class="btn" data-submit>
+						<p>
+							Оставить заявку
+						</p>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal" id="popup-call2">
+			<div class="popup-call__box call">
+				<div class="box-modal__close articmodal-close">
+					<img src="img/close3.svg" alt="">
+				</div>
+				<p class="popup__title">
+					Получить предложение
+				</p>
+				<p class="popup__text">
+					Мы работает только с юридическими лицами.
+					Минимальная сумма заказа 50 000р.
+				</p>
+				<form action="success.php" class="order__form js-form" id="popupResult" method="post">
+					<div class="order__flex q">
+						<div class="form-group">
+							<input type="text" name="name" required placeholder=" " class="order__input form__field" id="name">
+							<label for="name">Имя*</label>
+						</div>
+						<div class="form-group">
+							<input type="tel" name="tel" required placeholder=" " class="order__input form__field" id="tel">
+							<label for="tel">Телефон*</label>
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" required placeholder=" " class="order__input form__field"
+								id="email">
+							<label for="email">Email*</label>
+						</div>
+					</div>
+					<div class="checkbox q">
+						<input class="form-check-input custom-checkbox form-control" type="checkbox" name="check" id="form2"
+							value="Я даю свое согласие на обработку персональных данных">
+						<label class="form-check-label " for="form2">
+							<span>
+								Нажимая на кнопку, вы даёте согласие на <a href="#" target="_blank">обработку
+									ваших
+									персональных данных</a> 
+							</span>
+						</label>
+					</div>
 					<button class="btn" data-submit>
 						<p>
 							Оставить заявку
